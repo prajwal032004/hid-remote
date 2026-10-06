@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">HID Remote</string>
+    <string name="app_description">Bluetooth HID Mouse and Keyboard Remote</string>
+
+    <!-- Connection States -->
+    <string name="status_not_supported">HID Profile Not Supported</string>
+    <string name="status_bluetooth_off">Bluetooth is Off</string>
+    <string name="status_permissions_required">Permissions Needed</string>
+    <string name="status_initializing">Initializing HID Stack…</string>
+    <string name="status_registering">Registering HID Profile…</string>
+    <string name="status_ready">Ready to Connect</string>
+    <string name="status_connecting">Connecting to %1$s…</string>
+    <string name="status_connected">Connected to %1$s</string>
+    <string name="status_disconnecting">Disconnecting…</string>
+    <string name="status_error">Connection Error</string>
+
+    <!-- Buttons & Actions -->
+    <string name="action_connect">Connect</string>
+    <string name="action_disconnect">Disconnect</string>
+    <string name="action_select_host">Select Host</string>
+    <string name="action_enable_bluetooth">Enable Bluetooth</string>
+    <string name="action_grant_permissions">Grant Permissions</string>
+    <string name="action_pair_new_device">Pair New Device</string>
+    <string name="action_open_settings">Bluetooth Settings</string>
+    <string name="action_reconnect">Reconnect</string>
+    <string name="action_keyboard">Keyboard</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_left_click">Left Click</string>
+    <string name="action_right_click">Right Click</string>
+    <string name="action_middle_click">Middle</string>
+    <string name="action_drag_lock">Drag Lock</string>
+    <string name="action_send_text">Send Text</string>
+    <string name="action_clear">Clear</string>
+
+    <!-- Touchpad -->
+    <string name="touchpad_hint">Touchpad Active</string>
+    <string name="touchpad_guide">1 Finger: Move • Tap: Left Click • 2 Fingers: Right Click / Scroll • Tap-Hold: Drag</string>
+    <string name="touchpad_drag_active">DRAG MODE ACTIVE</string>
+
+    <!-- Dialogs & Titles -->
+    <string name="title_paired_hosts">Select Paired Host</string>
+    <string name="title_settings">Remote Settings</string>
+    <string name="title_compatibility">Device Compatibility</string>
+    <string name="no_paired_devices">No paired Bluetooth devices found.\nPair your PC, Mac, or Smart TV in Android Bluetooth settings first.</string>
+
+    <!-- Settings options -->
+    <string name="pref_mouse_sensitivity">Mouse Sensitivity</string>
+    <string name="pref_mouse_acceleration">Mouse Acceleration</string>
+    <string name="pref_scroll_sensitivity">Scroll Sensitivity</string>
+    <string name="pref_invert_scroll">Invert Scroll Direction</string>
+    <string name="pref_left_handed">Left-Handed Mouse Buttons</string>
+    <string name="pref_haptic">Haptic Feedback</string>
+    <string name="pref_keep_screen_on">Keep Screen On</string>
+    <string name="pref_auto_reconnect">Auto-Reconnect to Last Host</string>
+
+    <!-- Compatibility explanation -->
+    <string name="compatibility_info_title">Native Bluetooth HID Device Profile</string>
+    <string name="compatibility_info_body">This app utilizes Android\'s native BluetoothHidDevice API (available since Android 9.0 Pie) to register this phone as an authentic Bluetooth HID composite peripheral (Keyboard + Mouse + Media Remote). Most Windows, macOS, Linux, and Android TV systems will instantly recognize it as a hardware Bluetooth mouse and keyboard without needing any server software installed on the computer.</string>
+</resources>

@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="18 18 72 72" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="108" y2="108" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1E1B4B"/>
+      <stop offset="0.55" stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#070B14"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="54" cy="50" r="46" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity="0.33"/>
+      <stop offset="0.6" stop-color="#22D3EE" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="pad" x1="30" y1="30" x2="78" y2="78" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#818CF8"/>
+    </linearGradient>
+    <linearGradient id="hl" x1="54" y1="30" x2="54" y2="52" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <clipPath id="clip"><rect x="18" y="18" width="72" height="72" rx="20"/></clipPath>
+  </defs>
+  <g clip-path="url(#clip)">
+    <rect width="108" height="108" fill="url(#bg)"/>
+    <rect width="108" height="108" fill="url(#glow)"/>
+    <path fill="#000" fill-opacity="0.25" d="M43,33 H65 A13,13 0 0 1 78,46 V68 A13,13 0 0 1 65,81 H43 A13,13 0 0 1 30,68 V46 A13,13 0 0 1 43,33 Z"/>
+    <path fill="url(#pad)" d="M43,30 H65 A13,13 0 0 1 78,43 V65 A13,13 0 0 1 65,78 H43 A13,13 0 0 1 30,65 V43 A13,13 0 0 1 43,30 Z"/>
+    <path fill="url(#hl)" d="M43,30 H65 A13,13 0 0 1 78,43 V50 C66,46 44,46 30,52 V43 A13,13 0 0 1 43,30 Z"/>
+    <path d="M64,40 A6,6 0 0 1 70,46" stroke="#FFFFFF" stroke-opacity="0.9" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+    <path d="M64,35 A11,11 0 0 1 75,46" stroke="#FFFFFF" stroke-opacity="0.6" stroke-width="2.6" stroke-linecap="round" fill="none"/>
+    <path d="M47,40 L47,64 L52.8,58.6 L57,67.5 L61,65.6 L56.9,56.8 L64.5,56.8 Z" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.6" stroke-linejoin="round"/>
+  </g>
+</svg>

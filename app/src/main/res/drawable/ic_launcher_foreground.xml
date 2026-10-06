@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- A glass touchpad with a cursor and wireless arcs. Everything sits inside the 66dp safe zone. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Soft shadow under the pad -->
+    <path
+        android:fillColor="#40000000"
+        android:pathData="M43,33 H65 A13,13 0 0 1 78,46 V68 A13,13 0 0 1 65,81 H43 A13,13 0 0 1 30,68 V46 A13,13 0 0 1 43,33 Z" />
+
+    <!-- Pad -->
+    <path android:pathData="M43,30 H65 A13,13 0 0 1 78,43 V65 A13,13 0 0 1 65,78 H43 A13,13 0 0 1 30,65 V43 A13,13 0 0 1 43,30 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="30"
+                android:startY="30"
+                android:endX="78"
+                android:endY="78">
+                <item android:offset="0.0" android:color="#FF22D3EE" />
+                <item android:offset="1.0" android:color="#FF818CF8" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Glass highlight on the upper half -->
+    <path android:pathData="M43,30 H65 A13,13 0 0 1 78,43 V50 C66,46 44,46 30,52 V43 A13,13 0 0 1 43,30 Z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:type="linear"
+                android:startX="54"
+                android:startY="30"
+                android:endX="54"
+                android:endY="52">
+                <item android:offset="0.0" android:color="#40FFFFFF" />
+                <item android:offset="1.0" android:color="#00FFFFFF" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Wireless arcs -->
+    <path
+        android:pathData="M64,40 A6,6 0 0 1 70,46"
+        android:strokeWidth="2.6"
+        android:strokeLineCap="round"
+        android:strokeColor="#E6FFFFFF"
+        android:fillColor="#00000000" />
+    <path
+        android:pathData="M64,35 A11,11 0 0 1 75,46"
+        android:strokeWidth="2.6"
+        android:strokeLineCap="round"
+        android:strokeColor="#99FFFFFF"
+        android:fillColor="#00000000" />
+
+    <!-- Cursor -->
+    <path
+        android:pathData="M47,40 L47,64 L52.8,58.6 L57,67.5 L61,65.6 L56.9,56.8 L64.5,56.8 Z"
+        android:fillColor="#FFFFFFFF"
+        android:strokeColor="#FF0F172A"
+        android:strokeWidth="1.6"
+        android:strokeLineJoin="round" />
+</vector>

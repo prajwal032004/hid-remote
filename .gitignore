@@ -1,0 +1,73 @@
+# ─────────────────────────────────────────────────────────────
+#  HID Remote · .gitignore
+# ─────────────────────────────────────────────────────────────
+
+# ── Secrets & signing (NEVER commit these) ───────────────────
+keystore.properties
+*.jks
+*.keystore
+*.p12
+*.pem
+.env
+.env.*
+google-services.json
+local.properties
+secrets.properties
+
+# ── Build output ────────────────────────────────────────────
+build/
+/app/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+output-metadata.json
+/release/
+
+# ── Gradle ──────────────────────────────────────────────────
+.gradle/
+.kotlin/
+!gradle/wrapper/gradle-wrapper.jar
+
+# ── Android Studio / IntelliJ ───────────────────────────────
+*.iml
+*.ipr
+*.iws
+.idea/
+.navigation/
+out/
+
+# ── VS Code & other editors ─────────────────────────────────
+.vscode/
+*.swp
+*~
+.project
+.classpath
+.settings/
+
+# ── Logs, crash dumps & profiling ───────────────────────────
+*.log
+*.hprof
+hs_err_pid*
+replay_pid*
+
+# ── Test & screenshot tooling scratch ───────────────────────
+/app/build/outputs/roborazzi/
+*_compare.png
+*_actual.png
+
+# ── OS junk ─────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+
+# ── Leftovers from the AI Studio template ───────────────────
+/public/
+metadata.json
+.env.example
