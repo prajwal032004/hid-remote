@@ -24,6 +24,6 @@
 
 ### Verify your download
 ```
-SHA-256  e387f71481d29c23bccc21b678dcab4815a84f4d74a083d979b2c94006f285ca
+SHA-256  de15d16abe8d961f68dd0b4484c43f76c00544f39a5eadcf14f3741bda3e5000
 Signer   CN=Prajwal A B, OU=HID Remote, O=prajwal032004
 ```

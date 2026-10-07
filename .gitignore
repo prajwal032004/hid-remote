@@ -20,13 +20,15 @@ build/
 /captures/
 .externalNativeBuild/
 .cxx/
+# Build APKs stay out; the published APK in /release/ is committed on purpose.
+# (Files over 100 MB are blocked by .githooks/pre-commit and the CI size check.)
 *.apk
+!/release/*.apk
 *.aab
 *.ap_
 *.dex
 *.class
 output-metadata.json
-/release/
 
 # ── Gradle ──────────────────────────────────────────────────
 .gradle/

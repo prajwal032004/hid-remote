@@ -1,0 +1,21 @@
+#!/bin/sh
+# Blocks commits containing files GitHub would reject (over 100 MB).
+# Enable once per clone:  git config core.hooksPath .githooks
+
+LIMIT=$((100 * 1024 * 1024))
+WARN=$((50 * 1024 * 1024))
+status=0
+
+for file in $(git diff --cached --name-only --diff-filter=ACM); do
+  [ -f "$file" ] || continue
+  size=$(wc -c < "$file" | tr -d ' ')
+  mb=$((size / 1024 / 1024))
+  if [ "$size" -gt "$LIMIT" ]; then
+    echo "✖ $file is ${mb} MB. GitHub rejects files over 100 MB; attach it to a GitHub Release instead."
+    status=1
+  elif [ "$size" -gt "$WARN" ]; then
+    echo "⚠ $file is ${mb} MB (allowed, but GitHub warns above 50 MB)."
+  fi
+done
+
+exit $status
