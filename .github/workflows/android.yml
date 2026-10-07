@@ -13,11 +13,21 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: Block files over 100 MB
+        shell: bash
         run: |
-          big=$(git ls-files -z | xargs -0 find 2>/dev/null -maxdepth 0 -type f -size +100M)
+          limit=$((100 * 1024 * 1024))
+          big=""
+          while IFS= read -r -d '' f; do
+            [ -f "$f" ] || continue
+            size=$(wc -c < "$f")
+            if [ "$size" -gt "$limit" ]; then big="$big$f ($((size / 1024 / 1024)) MB)"$'\n'; fi
+          done < <(git ls-files -z)
           if [ -n "$big" ]; then
-            echo "::error::Files over 100 MB are not allowed:"; echo "$big"; exit 1
+            echo "::error::Files over 100 MB are not allowed:"
+            printf '%s' "$big"
+            exit 1
           fi
+          echo "All tracked files are under 100 MB ($(git ls-files | wc -l) files checked)."
 
       # Robolectric's SDK 36 sandbox needs Java 21.
       - uses: actions/setup-java@v4
